@@ -26,15 +26,15 @@ def processRequest(req):    # This method processes the incoming request
 
     result = req.get("queryResult")
     parameters = result.get("parameters")
-    year=parameters.get("yearinput")
+    age=parameters.get("ageInput")
     
     intent = result.get("intent").get('displayName')
     
     if (intent=='DataYes'):
-        prediction = model.predict([[year]])
+        prediction = model.predict([[age]])
         output = round(prediction[0], 2)       
        
-        fulfillmentText= "The Per capita income for this year is:  {} !".format(output)
+        fulfillmentText= "El nivel de colesterol saludable(125 a 200):  {} !".format(output)
 
         return {
             "fulfillmentText": fulfillmentText
