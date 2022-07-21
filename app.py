@@ -40,5 +40,5 @@ def processRequest(req):    # This method processes the incoming request
             "fulfillmentText": fulfillmentText
         }
 
-# if __name__ == '__main__':
-#     app.run()
+if __name__ == '__main__':
+    app.run()
